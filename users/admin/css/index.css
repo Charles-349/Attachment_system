@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: #f7f7f7;
+  overflow-x: hidden;
+}
+.main {
+  width: 100%;
+  border-radius: 16px;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  background-color: #277510;
+}
+
+header .logo1 {
+  color: #fff;
+}
+
+header .nav {
+  display: flex;
+}
+header .nav a {
+  margin-right: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+
+header .nav a:hover {
+  text-decoration: none;
+  color: #91d343;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.form {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+/* Side bar */
+.sidebar, .main-content{
+  background-color: #fff;
+  min-height: 90vh;
+}
+
+.sidebar{
+  border-right: 5px solid #eee;
+  background-color: #277510;
+  padding: 0px;
+}
+.side-nav{
+}
+
+.side-nav-item{
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #fff;
+  padding-left: 20px;
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+  padding-left: 30px;
+}
+.side-nav-item h5{
+  color: #0c0c0b;
+}
+
+.side-nav-item:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  .main,
+  header {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+.addAdmin {
+  display: block;
+  margin: 0px 0px;
+}
+.addAdmin form{
+  margin: 0px;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  display: none;
+  cursor: pointer;
+}
+.menu-icon i {
+  font-size: 25px;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .main,
+  header {
+    /* padding-left: 10vw;
+    padding-right: 10vw; */
+  }
+  header h3 {
+    display: none;
+  }
+  .logo img {
+    width: 50px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 100;
+    margin-top: 10vh;
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main-content {
+    position: relative;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+.list-card{
+  margin: 10px;
+  border: 1px solid #eee;
+  padding: 20px;
+  max-width: 600px;
+}
+.list-card h4{
+  display: inline;
+  margin-right: 10px;
+}
+
+.list-card .pdf-btns{
+  display: flex;
+}
